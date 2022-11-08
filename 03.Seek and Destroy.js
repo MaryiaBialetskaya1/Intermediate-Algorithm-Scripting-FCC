@@ -19,7 +19,7 @@ function destroyer(arr) {
     }
     return filteredArray;
   }
-
+  console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
   //Code Explanation
 //   Create an array of valsToRemove using Object.values(arguments).slice(1) and store it in the variable valsToRemove. We’ll use this to check against arr.
 
@@ -32,3 +32,13 @@ function destroyer(arr) {
 //   If the value is not flagged for removal, add it the the filteredArray.
 
 //   Outside of the nested loops, return the filteredArray.
+
+//another solution
+function destroyer_1(arr) {
+    const valsToRemove = Array.from(arguments).slice(1);
+    return arr.filter(function(val) {
+      return !valsToRemove.includes(val);
+    });
+  }
+
+  console.log(destroyer_1([1, 2, 3, 1, 2, 3], 2, 3))
