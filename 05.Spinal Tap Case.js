@@ -7,3 +7,9 @@ function spinalCase(str) {
   spinalCase('This Is Spinal Tap');
   console.log(spinalCase('This Is Spinal Tap'))
 
+//Split the string at one of the following conditions
+        //a whitespace character [\s] is encountered
+        //underscore character [_] is encountered
+        //or by an uppercase letter [(?=[A-Z])]
+//Join the array using a hyphen (-)
+//Lowercase the whole resulting string
