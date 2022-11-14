@@ -53,3 +53,26 @@ function convertHTML(str) {
   // test here
   convertHTML_1("Dolce & Gabbana");
   console.log(convertHTML_1("Dolce & Gabbana"))
+
+
+  //third solution
+
+  function convertHTML_3(str) {
+    // Use Object Lookup to declare as many HTML entities as needed.
+    const htmlEntities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&apos;"
+    };
+    //Use map function to return a filtered str with all entities changed automatically.
+    return str
+      .split("")
+      .map(entity => htmlEntities[entity] || entity)
+      .join("");
+  }
+
+  // test here
+  convertHTML_3("Dolce & Gabbana");
+  console.log(convertHTML_3("Dolce & Gabbana"))
