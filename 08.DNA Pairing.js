@@ -34,5 +34,4 @@ function pairElement(str) {
     return paired;
   }
 
-  // test here
   pairElement("GCG");
