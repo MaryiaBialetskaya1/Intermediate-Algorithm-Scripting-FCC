@@ -30,3 +30,14 @@ function translatePigLatin(str) {
 
 // if regex pattern not found (starts with vowels), it just adds “way” to the ending
 
+
+//another solution
+function translatePigLatin_1(str) {
+    if (str.match(/^[aeiou]/)) return str + "way";
+
+    const consonantCluster = str.match(/^[^aeiou]+/)[0];
+    return str.substring(consonantCluster.length) + consonantCluster + "ay";
+  }
+
+  // test here
+  translatePigLatin_1("consonant");
