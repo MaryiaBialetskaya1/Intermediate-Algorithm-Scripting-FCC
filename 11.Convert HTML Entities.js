@@ -34,3 +34,22 @@ function convertHTML(str) {
 
   convertHTML("Dolce & Gabbana");
   console.log(convertHTML("Dolce & Gabbana"))
+
+  //second solution
+
+  function convertHTML_1(str) {
+    // Use Object Lookup to declare as many HTML entities as needed.
+    const htmlEntities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&apos;"
+    };
+    // Using a regex, replace characters with it's corresponding html entity
+    return str.replace(/([&<>\"'])/g, match => htmlEntities[match]);
+  }
+
+  // test here
+  convertHTML_1("Dolce & Gabbana");
+  console.log(convertHTML_1("Dolce & Gabbana"))
