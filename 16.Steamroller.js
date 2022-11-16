@@ -20,3 +20,12 @@ steamrollArray([1, [2], [3, [[4]]]]);
 console.log(steamrollArray([1, [2], [3, [[4]]]]));
 console.log(steamrollArray([[["a"]], [["b"]]]));
 console.log(steamrollArray([1, {}, [3, [[4]]]]));
+
+//second solution
+function steamrollArray_2(arr) {
+  const flat = [].concat(...arr);
+  return flat.some(Array.isArray) ? steamrollArray(flat) : flat;
+}
+
+steamrollArray_2([1, [2], [3, [[4]]]]);
+console.log(steamrollArray_2([1, [2], [3, [[4]]]]));
