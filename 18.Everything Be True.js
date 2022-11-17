@@ -46,3 +46,5 @@ console.log(
     "name"
   )
 );
+
+//Uses the native “every” method to test whether all elements in the array pass the test.
