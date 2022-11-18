@@ -29,3 +29,18 @@ addTogether(2, 3);
 console.log(addTogether(2, 3));
 
 //The global isFinite() function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.
+
+//second solution
+
+function addTogether_2() {
+  const [first, second] = arguments;
+  if (typeof first !== "number") return undefined;
+  if (arguments.length === 1) return (second) => addTogether(first, second);
+  if (typeof second !== "number") return undefined;
+  return first + second;
+}
+
+addTogether_2(2, 3);
+console.log(addTogether_2(2, 3));
+console.log(addTogether_2(5)(7));
+console.log(addTogether_2(2, "3"));
